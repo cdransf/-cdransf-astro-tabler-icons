@@ -2,14 +2,13 @@
 import ICONS from "../utils/icons.js";
 
 const { name, size = 24, color = "currentColor", className = "", attrs = {} } = Astro.props;
-
 const contents = ICONS[name];
 
 if (!contents) console.error(`Icon "${name}" not found in ICONS.`);
 
 const svgMarkup = contents
-  ? `${ICONS.HEAD} width='${size}' height='${size}' fill='${color}' class='${className}' aria-hidden='true' ${Object.entries(attrs)
-      .map(([key, value]) => `${key}='${value}'`)
+  ? `${ICONS.HEAD.slice(0, -1)} aria-hidden="true" width="${size}" height="${size}" fill="${color}" class="${className}" ${Object.entries(attrs)
+      .map(([key, value]) => `${key}="${value}"`)
       .join(" ")}>${contents}${ICONS.TAIL}`
   : null;
 ---

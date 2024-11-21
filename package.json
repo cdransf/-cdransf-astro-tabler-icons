@@ -1,6 +1,6 @@
 {
   "name": "@cdransf/astro-tabler-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Reusable Astro components for tabler icons",
   "main": "dist/components/icons.js",
   "module": "src/components/icons.js",
@@ -10,12 +10,16 @@
   "scripts": {
     "build": "node build.js && astro build"
   },
-  "keywords": ["astro", "icons", "svg", "tabler-icons"],
+  "keywords": [
+    "astro",
+    "icons",
+    "svg",
+    "tabler-icons"
+  ],
   "author": "Cory Dransfeldt",
   "license": "MIT",
-  "dependencies": {
-    "astro": "^4.0.0",
-    "@tabler/icons": "^3.22.0"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "@tabler/icons": "^3.22.0",
+    "astro": "^4.0.0"
+  }
 }
