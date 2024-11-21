@@ -1,11 +1,11 @@
 {
   "name": "@cdransf/astro-tabler-icons",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Reusable Astro components for tabler icons",
   "main": "dist/components/icons.js",
-  "module": "dist/components/icons.js",
+  "module": "src/components/icons.js",
   "exports": {
-    ".": "./dist/components/icons.js"
+    ".": "./src/components/icons.js"
   },
   "scripts": {
     "build": "node build.js && astro build"
