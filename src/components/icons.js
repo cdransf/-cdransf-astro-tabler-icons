@@ -4,12 +4,13 @@ const components = {};
 
 Object.keys(ICONS).forEach((key) => {
   if (key !== "HEAD" && key !== "TAIL") {
-    components[key] = ({
+    const componentName = key.startsWith("Icon") ? key : `Icon${key}`;
+    components[componentName] = ({
       size = 24,
       color = "currentColor",
       className = "",
       attrs = {},
-    }) => {
+    } = {}) => {
       const contents = ICONS[key];
 
       if (!contents) {
@@ -18,15 +19,16 @@ Object.keys(ICONS).forEach((key) => {
       }
 
       const attributes = Object.entries(attrs)
-        .map(([key, value]) => `${key}="${value}"`)
+        .map(([attrKey, attrValue]) => `${attrKey}="${attrValue}"`)
         .join(" ");
-
-      return `
-        ${ICONS.HEAD.slice(0, -1)} aria-hidden="true" 
-        width="${size}" height="${size}" 
+      const svgMarkup = `
+        ${ICONS.HEAD.slice(0, -1)} aria-hidden="true"
+        width="${size}" height="${size}"
         fill="${color}" class="${className}" ${attributes}>
         ${contents}${ICONS.TAIL}
       `;
+
+      return svgMarkup;
     };
   }
 });

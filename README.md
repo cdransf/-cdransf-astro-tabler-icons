@@ -16,10 +16,11 @@ npm i -D @cdransf/astro-tabler-icons
 
 ```astro
 ---
-import { IconCircleX } from "@cdransf/astro-tabler-icons";
+import icons from "@cdransf/astro-tabler-icons";
+const { IconMenu2, IconX } = icons
 ---
 
-<IconCircleX size={24} />
+<div set:html={IconMenu2({size: 24})}>
 
 ```
 
