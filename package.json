@@ -1,6 +1,6 @@
 {
   "name": "@cdransf/astro-tabler-icons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Reusable Astro components for tabler icons",
   "main": "dist/components/icons.js",
   "module": "src/components/icons.js",
@@ -19,7 +19,7 @@
   "author": "Cory Dransfeldt",
   "license": "MIT",
   "devDependencies": {
-    "@tabler/icons": "^3.22.0",
+    "@tabler/icons": "^3.23.0",
     "astro": "^4.0.0"
   }
 }
